@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Tisski.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="McTools.Xrm.Connection, Version=1.2019.11.27, Culture=neutral, PublicKeyToken=96037217801d9658, processorArchitecture=MSIL">
       <HintPath>packages\MscrmTools.Xrm.Connection.1.2019.11.27\lib\net462\McTools.Xrm.Connection.dll</HintPath>
@@ -145,6 +151,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Tisski.pfx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyPluginControl.resx">
@@ -158,6 +165,7 @@
       xcopy "$(TargetDir)$(TargetFileName)" "$(TargetDir)Plugins\" /Y
       xcopy "$(TargetDir)$(TargetName).pdb" "$(TargetDir)Plugins\" /Y
       xcopy "$(TargetDir)$(TargetFileName)"  "C:\Users\mattt\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\" /Y
+      xcopy "$(TargetDir)$(TargetFileName)"  "C:\dev\MOD\XRMToolBoxAccessTeamViewer\AccessTeamViewer\Plugins\" /Y
 
       )</PostBuildEvent>
   </PropertyGroup>
